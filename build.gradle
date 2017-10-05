@@ -1,0 +1,12 @@
+sourceSets.main {
+	java.srcDirs project.projectDir.name
+	resources.srcDirs project.projectDir.name
+	
+}
+jar {
+	doFirst {
+		archivesBaseName = "[1.8.x]EBLib"
+	}
+}
+tasks.withType(Jar) {compileJava.options.encoding = 'UTF-8'}
+tasks.withType(Jar) {compileApiJava.options.encoding = 'UTF-8'}
